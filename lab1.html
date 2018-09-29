@@ -373,7 +373,7 @@ $(document).ready(function() {
         .row(x)
         .remove()
         .draw();
-		table.row.add( [ $("#masp1").val(), $("#tensp1").val(), $("#mahang1").val(), $("#gioitinh1").val(), $("#soluong1").val(), $("#dongia1").val() + '&#8363;', $("#datepicker1").val(), '<button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button><button class="btn-danger" title="Xoá" onclick="Delete()"><i class="fa fa-trash"></i></button>' ] )
+		table.row.add( [ $("#masp1").val(), $("#tensp1").val(), $("#mahang1").val(), $("#gioitinh1").val(), $("#soluong1").val(), $("#dongia1").val() + '&#8363;', $("#datepicker1").val(), '<button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button><button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button>' ] )
     .draw();
 			} );
 	$('#delModal').on( 'click', 'button.btn-danger', function () {
@@ -387,7 +387,7 @@ $(document).ready(function() {
 
 function Add(){
 		var table = $('#listtable').DataTable();
-		var rowNode = table.row.add( [ $("#masp").val(), $("#tensp").val(), $("#mahang").val(), $("#gioitinh").val(), $("#soluong").val(), $("#dongia").val() + '&#8363;', $("#datepicker").val(), '<button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button><button class="btn-danger" title="Xoá" onclick="Delete()"><i class="fa fa-trash"></i></button>' ] )
+		var rowNode = table.row.add( [ $("#masp").val(), $("#tensp").val(), $("#mahang").val(), $("#gioitinh").val(), $("#soluong").val(), $("#dongia").val() + '&#8363;', $("#datepicker").val(), '<button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button><button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button>' ] )
     .draw();
 }; 
 </script>
