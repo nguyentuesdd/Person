@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Lab 1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script language="JavaScript" src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
+<script language="JavaScript" src="jquery.dataTables.min.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="jquery.dataTables.min.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$( function() {
+$( "#datepicker" ).datepicker();
+$( "#datepicker1" ).datepicker();
+} );
+</script>
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark"> 
+  <!-- Brand --> 
+  <a class="navbar-brand" href="https://nguyentuesdd.azurewebsites.net">Đỗ Nguyên Tú</a> 
+  
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item"> <a class="nav-link" href="index.html">Home</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="about.html">About</a> </li>
+    
+    <!-- Dropdown -->
+    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> Exercise </a>
+      <div class="dropdown-menu"> <a class="dropdown-item" href="lab1.html">Lab 1</a> <a class="dropdown-item" href="#">Link 2</a> <a class="dropdown-item" href="#">Link 3</a> </div>
+    </li>
+  </ul>
+</nav>
+<br>
+<!-- End navbar -->
+
+<div class="container">
+  <center>
+    <h1>QUẢN LÝ GIÀY</h1>
+    <div class="float-left">
+      <button class="btn-success btn-lg mr-sm-1" title="Thêm" data-toggle="modal" data-target="#addModal"><i class="fa fa-plus"></i></button>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-hover table-bordered dataTable" id="listtable">
+        <thead class="text-center">
+          <tr>
+            <th title="Mã Sản Phẩm">Mã SP</th>
+            <th title="Tên Sản Phẩm">Tên SP</th>
+            <th title="Mã Hãng Sản Xuất">Mã Hãng</th>
+            <th title="Giới Tính">Giới Tính</th>
+            <th title="Số Lượng">Số Lượng</th>
+            <th title="Đơn Giá">Đơn Giá</th>
+            <th title="Ngày Nhập Hàng">Ngày Nhập</th>
+            <th title="Thao Tác">Thao Tác</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          <tr>
+            <td>001</td>
+            <td>Converse chucks taylor xanh dương cao cổ</td>
+            <td>CV01</td>
+            <td>Nam</td>
+            <td>20</td>
+            <td>285000</td>
+            <td>2017-08-09</td>
+            <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
+              <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
+          </tr>
+          <tr>
+            <td>002</td>
+            <td>Converse thấp cổ vải đen viền 1970 đen</td>
+            <td>CV01</td>
+            <td>Nữ</td>
+            <td>30</td>
+            <td>800000</td>
+            <td>2017-09-08</td>
+            <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
+              <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
+          </tr>
+          <tr>
+            <td>003</td>
+            <td>Nike air max sequent</td>
+            <td>N02</td>
+            <td>Nữ</td>
+            <td>15</td>
+            <td>1650000</td>
+            <td>2017-07-26</td>
+            <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
+              <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <!-- The Modal -->
+    <div class="modal" id="addModal">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Thêm Sản Phẩm</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="masp" title="Mã Sản Phẩm">Mã SP:</label>
+              <input type="text" class="form-control" placeholder="Nhập mã sản phẩm" id="masp">
+            </div>
+            <div class="form-group">
+              <label for="tensp" title="Tên Sản Phẩm">Tên SP:</label>
+              <input type="text" class="form-control" placeholder="Nhập tên sản phẩm" id="tensp">
+            </div>
+            <div class="form-group">
+              <label for="mahang" title="Mã Hãng Sản Xuất">Mã Hãng:</label>
+              <input type="text" class="form-control" placeholder="Nhập mã hãng" id="mahang">
+            </div>
+            <div class="form-group">
+              <label for="gioitinh" title="Giới Tính">Giới Tính:</label>
+              <select class="form-control" name="gioitinh" id="gioitinh">
+                <option>Chung</option>
+                <option>Nam</option>
+                <option>Nữ</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="soluong" title="Số Lượng">Số Lượng:</label>
+              <input type="number" class="form-control" placeholder="Nhập số lượng" id="soluong">
+            </div>
+            <div class="form-group">
+              <label for="dongia" title="Đơn Giá">Đơn Giá:</label>
+              <input type="number" class="form-control" placeholder="Nhập đơn giá" id="dongia">
+            </div>
+            <div class="form-group">
+              <label for="ngaynhap" title="Ngày Nhập Hàng">Ngày Nhập:</label>
+              <input type="text" id="datepicker" class="form-control" placeholder="Chọn ngày nhập" id="ngaynhap">
+            </div>
+          </div>
+          
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="Add()">Thêm</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Trở về</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal" id="editModal">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Sửa Sản Phẩm</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="masp" title="Mã Sản Phẩm">Mã SP:</label>
+              <input type="text" class="form-control" placeholder="Nhập mã sản phẩm" id="masp1">
+            </div>
+            <div class="form-group">
+              <label for="tensp" title="Tên Sản Phẩm">Tên SP:</label>
+              <input type="text" class="form-control" placeholder="Nhập tên sản phẩm" id="tensp1">
+            </div>
+            <div class="form-group">
+              <label for="mahang" title="Mã Hãng Sản Xuất">Mã Hãng:</label>
+              <input type="text" class="form-control" placeholder="Nhập mã hãng" id="mahang1">
+            </div>
+            <div class="form-group">
+              <label for="gioitinh" title="Giới Tính">Giới Tính:</label>
+              <select class="form-control" name="gioitinh" id="gioitinh1">
+                <option>Chung</option>
+                <option>Nam</option>
+                <option>Nữ</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="soluong" title="Số Lượng">Số Lượng:</label>
+              <input type="number" class="form-control" placeholder="Nhập số lượng" id="soluong1">
+            </div>
+            <div class="form-group">
+              <label for="dongia" title="Đơn Giá">Đơn Giá:</label>
+              <input type="number" class="form-control" placeholder="Nhập đơn giá" id="dongia1">
+            </div>
+            <div class="form-group">
+              <label for="ngaynhap" title="Ngày Nhập Hàng">Ngày Nhập:</label>
+              <input type="text" id="datepicker1" class="form-control" placeholder="Chọn ngày nhập" id="ngaynhap">
+            </div>
+          </div>
+          
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Lưu</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Trở về</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal" id="delModal">
+      <div class="modal-dialog">
+        <div class="modal-content"> 
+          
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Cảnh Báo</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="canhbao" title="Cảnh Báo">Bạn có chắc chắn xoá không?</label>
+            </div>
+          </div>
+          
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Có</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </center>
+</div>
+<script>
+$(document).ready(function() {
+    $('#listtable').DataTable( {
+        "pagingType": "full_numbers"
+    } );
+	
+	var table = $('#listtable').DataTable();
+	var x;
+	$('#listtable tbody').on( 'click', 'tr', function () {
+		x = table.row( this ).index();
+		$("#masp1").val(table.cell( x, 0 ).data());
+		$("#tensp1").val(table.cell( x, 1 ).data());
+		$("#mahang1").val(table.cell( x, 2 ).data());
+		$("#gioitinh1").val(table.cell( x, 3 ).data());
+		$("#soluong1").val(table.cell( x, 4 ).data());
+		$("#dongia1").val(table.cell( x, 5 ).data());
+		$("#datepicker1").val(table.cell( x, 6 ).data());
+		
+	} );
+	$('#editModal').on( 'click', 'button.btn-success', function () {
+			table
+        .row(x)
+        .remove()
+        .draw();
+		table.row.add( [ $("#masp1").val(), $("#tensp1").val(), $("#mahang1").val(), $("#gioitinh1").val(), $("#soluong1").val(), $("#dongia1").val(), $("#datepicker1").val(), '<button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button><button class="btn-danger" title="Xoá" onclick="Delete()"><i class="fa fa-trash"></i></button>' ] )
+    .draw();
+			} );
+	$('#delModal').on( 'click', 'button.btn-danger', function () {
+			table
+        .row(x)
+        .remove()
+        .draw();
+			} );
+	
+} );
+
+function Add(){
+		var table = $('#listtable').DataTable();
+		var rowNode = table.row.add( [ $("#masp").val(), $("#tensp").val(), $("#mahang").val(), $("#gioitinh").val(), $("#soluong").val(), $("#dongia").val(), $("#datepicker").val(), '<button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button><button class="btn-danger" title="Xoá" onclick="Delete()"><i class="fa fa-trash"></i></button>' ] )
+    .draw();
+}; 
+</script>
+</body>
+</html>
