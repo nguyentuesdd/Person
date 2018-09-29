@@ -364,7 +364,7 @@ $(document).ready(function() {
 		$("#mahang1").val(table.cell( x, 2 ).data());
 		$("#gioitinh1").val(table.cell( x, 3 ).data());
 		$("#soluong1").val(table.cell( x, 4 ).data());
-		$("#dongia1").val(table.cell( x, 5 ).data());
+		$("#dongia1").val(parseFloat(table.cell( x, 5 ).data()));
 		$("#datepicker1").val(table.cell( x, 6 ).data());
 		
 	} );
