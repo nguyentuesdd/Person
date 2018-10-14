@@ -22,9 +22,15 @@ $( "#datepicker1" ).datepicker({ dateFormat: 'yy-mm-dd' });
 } );
 </script>
 <style>
-.myimg img{
-	height:80%;
-	width:80%;	
+.myimg img {
+	height: 80%;
+	width: 80%;
+	margin-bottom: 2px;
+}
+.myimg {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-style: ridge;
 }
 </style>
 </head>
@@ -59,18 +65,41 @@ $( "#datepicker1" ).datepicker({ dateFormat: 'yy-mm-dd' });
   
   <!-- Tab panes -->
   <div class="tab-content">
-    <div class="tab-pane container active" id="requirement"><br><p>Chọn 1 đối tượng bất kỳ trong thế giới thực, ví dụ như
-sinh viên, môn học, giảng viên,… để thiết kế trên phần
-mềm một chức năng trên web để thêm, sửa, xóa,
-tìm kiếm cho đối tượng đó</p></div>
+    <div class="tab-pane container active" id="requirement"><br>
+      <p>Chọn 1 đối tượng bất kỳ trong thế giới thực, ví dụ như
+        sinh viên, môn học, giảng viên,… để thiết kế trên phần
+        mềm một chức năng trên web để thêm, sửa, xóa,
+        tìm kiếm cho đối tượng đó</p>
+    </div>
     <div class="tab-pane container fade" id="design"><br>
-    	<div class="myimg">
+      <div class="myimg">
         <center>
-    		<h3>Tổng quan</h3>
-        	<img src="http://sv1.upsieutoc.com/2018/10/14/tongquan.png" alt="tongquan.png" border="0" /><br>
-            <a href="img/lab1/Tongquan.xd" class="btn btn-success"><i class="fa fa-download"> Download</i></a>
-            </center>
-    	</div>
+          <h3>Tổng quan</h3>
+          <img src="http://sv1.upsieutoc.com/2018/10/14/tongquan.png" alt="tongquan.png" border="0" /><br>
+          <a href="img/lab1/Tongquan.xd" class="btn btn-success"><i class="fa fa-download"> Download</i></a>
+        </center>
+      </div>
+      <div class="myimg">
+        <center>
+          <h3>Thêm sản phẩm</h3>
+          <img src="http://sv1.upsieutoc.com/2018/10/14/add.png" alt="add.png" border="0" /><br>
+          <a href="img/lab1/ModalAdd.xd" class="btn btn-success"><i class="fa fa-download"> Download</i></a>
+        </center>
+      </div>
+      <div class="myimg">
+        <center>
+          <h3>Sửa sản phẩm</h3>
+          <img src="http://sv1.upsieutoc.com/2018/10/14/edit.png" alt="edit.png" border="0" /><br>
+          <a href="img/lab1/ModalEdit.xd" class="btn btn-success"><i class="fa fa-download"> Download</i></a>
+        </center>
+      </div>
+      <div class="myimg">
+        <center>
+          <h3>Xoá sản phẩm</h3>
+          <img src="http://sv1.upsieutoc.com/2018/10/14/del.png" alt="del.png" border="0" /><br>
+          <a href="img/lab1/ModalDel.xd" class="btn btn-success"><i class="fa fa-download"> Download</i></a>
+        </center>
+      </div>
     </div>
     <div id="manager" class="tab-pane container fade"><br>
       <center>
