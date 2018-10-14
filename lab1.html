@@ -21,6 +21,12 @@ $( "#datepicker" ).datepicker({ dateFormat: 'yy-mm-dd' });
 $( "#datepicker1" ).datepicker({ dateFormat: 'yy-mm-dd' });
 } );
 </script>
+<style>
+.myimg img{
+	height:80%;
+	width:80%;	
+}
+</style>
 </head>
 
 <body>
@@ -43,311 +49,334 @@ $( "#datepicker1" ).datepicker({ dateFormat: 'yy-mm-dd' });
 <br>
 <!-- End navbar -->
 
-<div class="container">
-  <center>
-    <h1>QUẢN LÝ GIÀY</h1>
-    <div class="float-left">
-      <button class="btn-success btn-lg mr-sm-1" title="Thêm" data-toggle="modal" data-target="#addModal"><i class="fa fa-plus"></i></button>
+<div class="container"> 
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#requirement">Requirement</a> </li>
+    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#design">Design</a> </li>
+    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#manager">Product</a> </li>
+  </ul>
+  
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane container active" id="requirement"><br><p>Chọn 1 đối tượng bất kỳ trong thế giới thực, ví dụ như
+sinh viên, môn học, giảng viên,… để thiết kế trên phần
+mềm một chức năng trên web để thêm, sửa, xóa,
+tìm kiếm cho đối tượng đó</p></div>
+    <div class="tab-pane container fade" id="design"><br>
+    	<div class="myimg">
+        <center>
+    		<h3>Tổng quan</h3>
+        	<img src="http://sv1.upsieutoc.com/2018/10/14/tongquan.png" alt="tongquan.png" border="0" /><br>
+            <a href="img/lab1/Tongquan.xd" class="btn btn-success"><i class="fa fa-download"> Download</i></a>
+            </center>
+    	</div>
     </div>
-    <div class="table-responsive">
-      <table class="table table-hover table-bordered dataTable" id="listtable">
-        <thead class="text-center">
-          <tr>
-            <th title="Mã Sản Phẩm">Mã SP</th>
-            <th title="Tên Sản Phẩm">Tên SP</th>
-            <th title="Mã Hãng Sản Xuất">Mã Hãng</th>
-            <th title="Giới Tính">Giới Tính</th>
-            <th title="Số Lượng">Số Lượng</th>
-            <th title="Đơn Giá">Đơn Giá</th>
-            <th title="Ngày Nhập Hàng">Ngày Nhập</th>
-            <th title="Thao Tác">Thao Tác</th>
-          </tr>
-        </thead>
-        <tbody class="text-center">
-          <tr>
-            <td>001</td>
-            <td>Converse chucks taylor xanh dương cao cổ</td>
-            <td>CV01</td>
-            <td>Nam</td>
-            <td>20</td>
-            <td>285000&#8363;</td>
-            <td>2017-08-09</td>
-            <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
-              <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
-          </tr>
-          <tr>
-            <td>002</td>
-            <td>Converse thấp cổ vải đen viền 1970 đen</td>
-            <td>CV01</td>
-            <td>Nữ</td>
-            <td>30</td>
-            <td>800000&#8363;</td>
-            <td>2017-09-08</td>
-            <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
-              <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
-          </tr>
-          <tr>
-            <td>003</td>
-            <td>Nike air max sequent</td>
-            <td>N02</td>
-            <td>Nữ</td>
-            <td>15</td>
-            <td>1650000&#8363;</td>
-            <td>2017-07-26</td>
-            <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
-              <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
-          </tr>
-          <tr>
-            <td>004</td>
-            <td>Jordan SC3-BG all black</td>
-            <td>JD04</td>
-            <td>Nam</td>
-            <td>15</td>
-            <td>1800000&#8363;</td>
-            <td>2017-08-05</td>
-            <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
-              <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
-          </tr>
-          <tr>
-            <td>005</td>
-            <td>Adidas Tubular Doom sock</td>
-            <td>AD03</td>
-            <td>Nam</td>
-            <td>15</td>
-            <td>2400000&#8363;</td>
-            <td>2017-07-26</td>
-            <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
-              <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
-          </tr>
-          <tr>
-            <td>006</td>
-            <td>Puma by Rihanna</td>
-            <td>PM08</td>
-            <td>Nữ</td>
-            <td>20</td>
-            <td>2000000&#8363;</td>
-            <td>2017-08-05</td>
-            <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
-              <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
-          </tr>
-          <tr>
-            <td>007</td>
-            <td>Under armour black/red</td>
-            <td>UA07</td>
-            <td>Nam</td>
-            <td>15</td>
-            <td>1900000&#8363;</td>
-            <td>2017-09-02</td>
-            <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
-              <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
-          </tr>
-          <tr>
-            <td>008</td>
-            <td>Reebok Astroride</td>
-            <td>RB05</td>
-            <td>Nữ</td>
-            <td>15</td>
-            <td>999000&#8363;</td>
-            <td>2017-09-12</td>
-            <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
-              <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
-          </tr>
-          <tr>
-            <td>009</td>
-            <td>Banuli captoe oxford (da bò - màu đỏ)</td>
-            <td>BN11</td>
-            <td>Nam</td>
-            <td>10</td>
-            <td>1700000&#8363;</td>
-            <td>2017-09-09</td>
-            <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
-              <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
-          </tr>
-          <tr>
-            <td>010</td>
-            <td>Dc chính hãng</td>
-            <td>DC09</td>
-            <td>Nam</td>
-            <td>15</td>
-            <td>800000&#8363;</td>
-            <td>2017-10-10</td>
-            <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
-              <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
-          </tr>
-          <tr>
-            <td>011</td>
-            <td>Giày lười công sở Sanvado da trơn màu đen</td>
-            <td>SVD12</td>
-            <td>Nam</td>
-            <td>20</td>
-            <td>699000&#8363;</td>
-            <td>2017-10-12</td>
-            <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
-              <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
-          </tr>
-          <tr>
-            <td>012</td>
-            <td>Gucci-GTA29 (đen)</td>
-            <td>GC014</td>
-            <td>Nam</td>
-            <td>30</td>
-            <td>5699000&#8363;</td>
-            <td>2017-10-12</td>
-            <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
-              <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
-          </tr>
-          <tr>
-            <td>013</td>
-            <td>Gucci- GT37</td>
-            <td>GC037</td>
-            <td>Nam</td>
-            <td>20</td>
-            <td>5890000&#8363;</td>
-            <td>2017-10-10</td>
-            <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
-              <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    
-    <!-- The Modal -->
-    <div class="modal" id="addModal">
-      <div class="modal-dialog">
-        <div class="modal-content"> 
-          
-          <!-- Modal Header -->
-          <div class="modal-header">
-            <h4 class="modal-title"><i class="fa fa-plus-square-o text-success"></i> Thêm Sản Phẩm</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-          
-          <!-- Modal body -->
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="masp" title="Mã Sản Phẩm">Mã SP:</label>
-              <input type="text" class="form-control" placeholder="Nhập mã sản phẩm" id="masp">
+    <div id="manager" class="tab-pane container fade"><br>
+      <center>
+        <h1>QUẢN LÝ GIÀY</h1>
+        <div class="float-left">
+          <button class="btn-success btn-lg mr-sm-1" title="Thêm" data-toggle="modal" data-target="#addModal"><i class="fa fa-plus"></i></button>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-hover table-bordered dataTable" id="listtable">
+            <thead class="text-center">
+              <tr>
+                <th title="Mã Sản Phẩm">Mã SP</th>
+                <th title="Tên Sản Phẩm">Tên SP</th>
+                <th title="Mã Hãng Sản Xuất">Mã Hãng</th>
+                <th title="Giới Tính">Giới Tính</th>
+                <th title="Số Lượng">Số Lượng</th>
+                <th title="Đơn Giá">Đơn Giá</th>
+                <th title="Ngày Nhập Hàng">Ngày Nhập</th>
+                <th title="Thao Tác">Thao Tác</th>
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              <tr>
+                <td>001</td>
+                <td>Converse chucks taylor xanh dương cao cổ</td>
+                <td>CV01</td>
+                <td>Nam</td>
+                <td>20</td>
+                <td>285000&#8363;</td>
+                <td>2017-08-09</td>
+                <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
+                  <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
+              </tr>
+              <tr>
+                <td>002</td>
+                <td>Converse thấp cổ vải đen viền 1970 đen</td>
+                <td>CV01</td>
+                <td>Nữ</td>
+                <td>30</td>
+                <td>800000&#8363;</td>
+                <td>2017-09-08</td>
+                <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
+                  <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
+              </tr>
+              <tr>
+                <td>003</td>
+                <td>Nike air max sequent</td>
+                <td>N02</td>
+                <td>Nữ</td>
+                <td>15</td>
+                <td>1650000&#8363;</td>
+                <td>2017-07-26</td>
+                <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
+                  <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
+              </tr>
+              <tr>
+                <td>004</td>
+                <td>Jordan SC3-BG all black</td>
+                <td>JD04</td>
+                <td>Nam</td>
+                <td>15</td>
+                <td>1800000&#8363;</td>
+                <td>2017-08-05</td>
+                <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
+                  <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
+              </tr>
+              <tr>
+                <td>005</td>
+                <td>Adidas Tubular Doom sock</td>
+                <td>AD03</td>
+                <td>Nam</td>
+                <td>15</td>
+                <td>2400000&#8363;</td>
+                <td>2017-07-26</td>
+                <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
+                  <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
+              </tr>
+              <tr>
+                <td>006</td>
+                <td>Puma by Rihanna</td>
+                <td>PM08</td>
+                <td>Nữ</td>
+                <td>20</td>
+                <td>2000000&#8363;</td>
+                <td>2017-08-05</td>
+                <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
+                  <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
+              </tr>
+              <tr>
+                <td>007</td>
+                <td>Under armour black/red</td>
+                <td>UA07</td>
+                <td>Nam</td>
+                <td>15</td>
+                <td>1900000&#8363;</td>
+                <td>2017-09-02</td>
+                <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
+                  <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
+              </tr>
+              <tr>
+                <td>008</td>
+                <td>Reebok Astroride</td>
+                <td>RB05</td>
+                <td>Nữ</td>
+                <td>15</td>
+                <td>999000&#8363;</td>
+                <td>2017-09-12</td>
+                <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
+                  <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
+              </tr>
+              <tr>
+                <td>009</td>
+                <td>Banuli captoe oxford (da bò - màu đỏ)</td>
+                <td>BN11</td>
+                <td>Nam</td>
+                <td>10</td>
+                <td>1700000&#8363;</td>
+                <td>2017-09-09</td>
+                <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
+                  <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
+              </tr>
+              <tr>
+                <td>010</td>
+                <td>Dc chính hãng</td>
+                <td>DC09</td>
+                <td>Nam</td>
+                <td>15</td>
+                <td>800000&#8363;</td>
+                <td>2017-10-10</td>
+                <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
+                  <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
+              </tr>
+              <tr>
+                <td>011</td>
+                <td>Giày lười công sở Sanvado da trơn màu đen</td>
+                <td>SVD12</td>
+                <td>Nam</td>
+                <td>20</td>
+                <td>699000&#8363;</td>
+                <td>2017-10-12</td>
+                <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
+                  <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
+              </tr>
+              <tr>
+                <td>012</td>
+                <td>Gucci-GTA29 (đen)</td>
+                <td>GC014</td>
+                <td>Nam</td>
+                <td>30</td>
+                <td>5699000&#8363;</td>
+                <td>2017-10-12</td>
+                <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
+                  <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
+              </tr>
+              <tr>
+                <td>013</td>
+                <td>Gucci- GT37</td>
+                <td>GC037</td>
+                <td>Nam</td>
+                <td>20</td>
+                <td>5890000&#8363;</td>
+                <td>2017-10-10</td>
+                <td><button class="btn-info" title="Sửa" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></button>
+                  <button class="btn-danger" title="Xoá" data-toggle="modal" data-target="#delModal"><i class="fa fa-trash"></i></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <!-- The Modal -->
+        <div class="modal" id="addModal">
+          <div class="modal-dialog">
+            <div class="modal-content"> 
+              
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title"><i class="fa fa-plus-square-o text-success"></i> Thêm Sản Phẩm</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              
+              <!-- Modal body -->
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="masp" title="Mã Sản Phẩm">Mã SP:</label>
+                  <input type="text" class="form-control" placeholder="Nhập mã sản phẩm" id="masp">
+                </div>
+                <div class="form-group">
+                  <label for="tensp" title="Tên Sản Phẩm">Tên SP:</label>
+                  <input type="text" class="form-control" placeholder="Nhập tên sản phẩm" id="tensp">
+                </div>
+                <div class="form-group">
+                  <label for="mahang" title="Mã Hãng Sản Xuất">Mã Hãng:</label>
+                  <input type="text" class="form-control" placeholder="Nhập mã hãng" id="mahang">
+                </div>
+                <div class="form-group">
+                  <label for="gioitinh" title="Giới Tính">Giới Tính:</label>
+                  <select class="form-control" name="gioitinh" id="gioitinh">
+                    <option>Chung</option>
+                    <option>Nam</option>
+                    <option>Nữ</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="soluong" title="Số Lượng">Số Lượng:</label>
+                  <input type="number" class="form-control" placeholder="Nhập số lượng" id="soluong">
+                </div>
+                <div class="form-group">
+                  <label for="dongia" title="Đơn Giá">Đơn Giá:</label>
+                  <input type="number" class="form-control" placeholder="Nhập đơn giá" id="dongia">
+                </div>
+                <div class="form-group">
+                  <label for="ngaynhap" title="Ngày Nhập Hàng">Ngày Nhập:</label>
+                  <input type="text" id="datepicker" class="form-control" placeholder="Chọn ngày nhập" id="ngaynhap">
+                </div>
+              </div>
+              
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal" onclick="Add()">Thêm</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Trở về</button>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="tensp" title="Tên Sản Phẩm">Tên SP:</label>
-              <input type="text" class="form-control" placeholder="Nhập tên sản phẩm" id="tensp">
-            </div>
-            <div class="form-group">
-              <label for="mahang" title="Mã Hãng Sản Xuất">Mã Hãng:</label>
-              <input type="text" class="form-control" placeholder="Nhập mã hãng" id="mahang">
-            </div>
-            <div class="form-group">
-              <label for="gioitinh" title="Giới Tính">Giới Tính:</label>
-              <select class="form-control" name="gioitinh" id="gioitinh">
-                <option>Chung</option>
-                <option>Nam</option>
-                <option>Nữ</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="soluong" title="Số Lượng">Số Lượng:</label>
-              <input type="number" class="form-control" placeholder="Nhập số lượng" id="soluong">
-            </div>
-            <div class="form-group">
-              <label for="dongia" title="Đơn Giá">Đơn Giá:</label>
-              <input type="number" class="form-control" placeholder="Nhập đơn giá" id="dongia">
-            </div>
-            <div class="form-group">
-              <label for="ngaynhap" title="Ngày Nhập Hàng">Ngày Nhập:</label>
-              <input type="text" id="datepicker" class="form-control" placeholder="Chọn ngày nhập" id="ngaynhap">
-            </div>
-          </div>
-          
-          <!-- Modal footer -->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-success" data-dismiss="modal" onclick="Add()">Thêm</button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Trở về</button>
           </div>
         </div>
-      </div>
-    </div>
-    
-    <div class="modal" id="editModal">
-      <div class="modal-dialog">
-        <div class="modal-content"> 
-          
-          <!-- Modal Header -->
-          <div class="modal-header">
-            <h4 class="modal-title"><i class="fa fa-edit text-info"></i> Sửa Sản Phẩm</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-          
-          <!-- Modal body -->
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="masp" title="Mã Sản Phẩm">Mã SP:</label>
-              <input type="text" class="form-control" placeholder="Nhập mã sản phẩm" id="masp1">
+        <div class="modal" id="editModal">
+          <div class="modal-dialog">
+            <div class="modal-content"> 
+              
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title"><i class="fa fa-edit text-info"></i> Sửa Sản Phẩm</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              
+              <!-- Modal body -->
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="masp" title="Mã Sản Phẩm">Mã SP:</label>
+                  <input type="text" class="form-control" placeholder="Nhập mã sản phẩm" id="masp1">
+                </div>
+                <div class="form-group">
+                  <label for="tensp" title="Tên Sản Phẩm">Tên SP:</label>
+                  <input type="text" class="form-control" placeholder="Nhập tên sản phẩm" id="tensp1">
+                </div>
+                <div class="form-group">
+                  <label for="mahang" title="Mã Hãng Sản Xuất">Mã Hãng:</label>
+                  <input type="text" class="form-control" placeholder="Nhập mã hãng" id="mahang1">
+                </div>
+                <div class="form-group">
+                  <label for="gioitinh" title="Giới Tính">Giới Tính:</label>
+                  <select class="form-control" name="gioitinh" id="gioitinh1">
+                    <option>Chung</option>
+                    <option>Nam</option>
+                    <option>Nữ</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="soluong" title="Số Lượng">Số Lượng:</label>
+                  <input type="number" class="form-control" placeholder="Nhập số lượng" id="soluong1">
+                </div>
+                <div class="form-group">
+                  <label for="dongia" title="Đơn Giá">Đơn Giá:</label>
+                  <input type="number" class="form-control" placeholder="Nhập đơn giá" id="dongia1">
+                </div>
+                <div class="form-group">
+                  <label for="ngaynhap" title="Ngày Nhập Hàng">Ngày Nhập:</label>
+                  <input type="text" id="datepicker1" class="form-control" placeholder="Chọn ngày nhập" id="ngaynhap">
+                </div>
+              </div>
+              
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Lưu</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Trở về</button>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="tensp" title="Tên Sản Phẩm">Tên SP:</label>
-              <input type="text" class="form-control" placeholder="Nhập tên sản phẩm" id="tensp1">
-            </div>
-            <div class="form-group">
-              <label for="mahang" title="Mã Hãng Sản Xuất">Mã Hãng:</label>
-              <input type="text" class="form-control" placeholder="Nhập mã hãng" id="mahang1">
-            </div>
-            <div class="form-group">
-              <label for="gioitinh" title="Giới Tính">Giới Tính:</label>
-              <select class="form-control" name="gioitinh" id="gioitinh1">
-                <option>Chung</option>
-                <option>Nam</option>
-                <option>Nữ</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="soluong" title="Số Lượng">Số Lượng:</label>
-              <input type="number" class="form-control" placeholder="Nhập số lượng" id="soluong1">
-            </div>
-            <div class="form-group">
-              <label for="dongia" title="Đơn Giá">Đơn Giá:</label>
-              <input type="number" class="form-control" placeholder="Nhập đơn giá" id="dongia1">
-            </div>
-            <div class="form-group">
-              <label for="ngaynhap" title="Ngày Nhập Hàng">Ngày Nhập:</label>
-              <input type="text" id="datepicker1" class="form-control" placeholder="Chọn ngày nhập" id="ngaynhap">
-            </div>
-          </div>
-          
-          <!-- Modal footer -->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-success" data-dismiss="modal">Lưu</button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Trở về</button>
           </div>
         </div>
-      </div>
-    </div>
-    
-    <div class="modal" id="delModal">
-      <div class="modal-dialog">
-        <div class="modal-content"> 
-          
-          <!-- Modal Header -->
-          <div class="modal-header">
-            <h4 class="modal-title"><i class="fa fa-warning text-warning"></i> Cảnh Báo</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-          
-          <!-- Modal body -->
-          <div class="modal-body">
-            <div class="form-group">
-              <label for="canhbao" title="Cảnh Báo">Bạn có chắc chắn xoá không?</label>
+        <div class="modal" id="delModal">
+          <div class="modal-dialog">
+            <div class="modal-content"> 
+              
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title"><i class="fa fa-warning text-warning"></i> Cảnh Báo</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              
+              <!-- Modal body -->
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="canhbao" title="Cảnh Báo">Bạn có chắc chắn xoá không?</label>
+                </div>
+              </div>
+              
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Có</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+              </div>
             </div>
           </div>
-          
-          <!-- Modal footer -->
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Có</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
-          </div>
         </div>
-      </div>
+      </center>
     </div>
-  </center>
+  </div>
 </div>
 <script>
 $(document).ready(function() {
