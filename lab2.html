@@ -3,8 +3,60 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Lab 2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<!-- End bootstrap -->
 </head>
 
 <body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark"> 
+  <!-- Brand --> 
+  <a class="navbar-brand" href="https://nguyentuesdd.azurewebsites.net">Đỗ Nguyên Tú</a> 
+  
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item"> <a class="nav-link" href="index.html">Home</a> </li>
+    <li class="nav-item"> <a class="nav-link" href="about.html">About</a> </li>
+    
+    <!-- Dropdown -->
+    <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"> Exercise </a>
+      <div class="dropdown-menu"> <a class="dropdown-item" href="lab1.html">Lab 1</a> <a class="dropdown-item" href="lab2.html">Lab 2</a> <a class="dropdown-item" href="#">Lab 3</a> </div>
+    </li>
+  </ul>
+</nav>
+<br>
+<!-- End navbar -->
+<div class="container"> 
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#requirement">Requirement</a> </li>
+    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#design">Design</a> </li>
+    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#product">Product</a> </li>
+  </ul>
+  
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane container active" id="requirement"><br>
+      <p>Tạo ra một user scenario</p>
+      <p>Chọn 1 bước trong user scenario để thiết kế 1 form giao diện
+        Web trên công cụ thiết kế đã chọn. Sau đó tạo ra file html tương
+        ứng cho thiết kế này</p>
+    </div>
+    <!-- requirement -->
+    <div class="tab-pane container fade" id="design"><br>
+    </div>
+    <!-- design -->
+    <div id="product" class="tab-pane container fade"><br>
+    </div>
+    <!-- product --> 
+  </div>
+  <!-- tab-content --> 
+</div>
+<!-- container -->
 </body>
 </html>
