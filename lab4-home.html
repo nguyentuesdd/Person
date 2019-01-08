@@ -53,7 +53,7 @@
 						<li><a href="#">About</a></li>
 						<li><a href="lab4-contact.html">Contact</a></li>
                         <li><a href="#">Login</a></li>
-                        <li><a href="#" class="btn btn-success">Sign up</a></li>
+                        <li><a href="#" class="btn btn-success" data-toggle="modal" data-target="#myModal">Sign up</a></li>
 					</ul>
 				</nav><!-- #nav-menu-container -->
 			</div>   
@@ -78,7 +78,7 @@
 
 					<div class="input-wrap">
 						<form action="" class="form-box d-flex justify-content-between">
-							<input type="text" placeholder="Search Courses" class="form-control" name="username" autofocus="autofocus">
+							<input type="text" placeholder="Search Courses" class="form-control" name="username" autofocus="autofocus" autocomplete="on">
 							<button type="submit" class="btn search-btn">Search</button>
 						</form>
 					</div>
@@ -333,6 +333,54 @@
 		<a title="Go to Top" href="#"></a>
 	</div>
 	<!-- ####################### End Scroll to Top Area ####################### -->
+    
+    <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+      	 <h4 class="modal-title text-success">Sign up</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group">
+            <div class="input-group-prepend mb-20 col-3">
+            	<span class="input-group-text fa fa-envelope">&ensp;Email:&ensp;&ensp;</span>
+            </div>
+        	<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''"
+								 onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control col-9" required type="email" autofocus="autofocus">
+        </div>
+        <div class="input-group">
+        	<div class="input-group-prepend mb-20 col-3">
+            	<span class="input-group-text fa fa-lock">&ensp;Password:</span>
+            </div>
+        	<input name="password" placeholder="Enter your password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your password'"
+								 class="common-input mb-20 form-control col-9" required type="password">
+        </div>
+        <div class="input-group">
+        	<div class="input-group-prepend mb-20 col-3">
+            	<span class="input-group-text fa fa-user">&ensp;Name:&ensp;&ensp;</span>
+            </div>
+        	<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'"
+								 class="common-input mb-20 form-control col-9" required type="text">
+        </div>
+        <div class="input-group">
+        	<div class="input-group-prepend mb-20 col-3">
+            	<span class="input-group-text fa fa-phone">&ensp;Phone:&ensp;&ensp;</span>
+            </div>
+        	<input name="phone" placeholder="Enter your phone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your phone'"
+								 class="common-input mb-20 form-control col-9" required type="text">
+        </div>
+        <div class="input-group">
+        	<input class="common-input mb-20 form-control btn btn-success col-12" value="Sign up" type="submit">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 	<script>
     	// When the user scrolls the page, execute myFunction 
