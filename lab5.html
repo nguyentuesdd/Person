@@ -35,9 +35,9 @@
 <br>
 <!-- End navbar -->
 <div class="container">
-<ul class="breadcrumb">
+  <ul class="breadcrumb">
     <li class="breadcrumb-item active">Lab 5</li>
-</ul>
+  </ul>
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#requirement">Requirement</a> </li>
@@ -47,54 +47,88 @@
   <!-- Tab panes -->
   <div class="tab-content">
     <div class="tab-pane container active" id="requirement"><br>
-        <ul>
-            <li><p>Tạo một trang Result trên đó liệt kê những gì mình đã
+      <ul>
+        <li>
+          <p>Tạo một trang Result trên đó liệt kê những gì mình đã
             làm/học được trong suốt quá trình làm bài tập nhóm. Dẫn
-            link tới từng trang do SV đã làm</p></li>
-            <li><p>Tự đánh giá mình được bao nhiêu % trong tổng số 100%
-			của bài tập nhóm</p></li>
-        </ul>
+            link tới từng trang do SV đã làm</p>
+        </li>
+        <li>
+          <p>Tự đánh giá mình được bao nhiêu % trong tổng số 100%
+            của bài tập nhóm</p>
+        </li>
+      </ul>
     </div>
     <!-- design -->
     <div id="implementation" class="tab-pane container fade"><br>
-    	<div id="accordion">
-    <div class="card">
-      <div class="card-header">
-        <a class="card-link" data-toggle="collapse" href="#collapseOne">
-          Collapsible Group Item #1
-        </a>
-      </div>
-      <div id="collapseOne" class="collapse" data-parent="#accordion">
-        <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      <h3>Result</h3>
+        <div class="alert alert-secondary">
+            <h5>Group website</h5> 
+        </div>
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header"> <a class="card-link" data-toggle="collapse" href="#collapseOne">#1 Azure</a> </div>
+          <div id="collapseOne" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+            	<p><b>Use Github to auto deploy website to Azure cloud:</b> use the feature of github so that whenever members commit code, it will automatically deploy to azure. Helping team work more effectively and avoid some bugs when merge code</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"> <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">#2 About page</a> </div>
+          <div id="collapseTwo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+            	<p><b>Create About page:</b> display information for each member of the group</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"> <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">#3 Style guide</a> </div>
+          <div id="collapseThree" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+            	<p><b>Create Style guide page:</b> writing Layout, Typography, Color palette and Branding documentation of website</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
-        Collapsible Group Item #2
-      </a>
-      </div>
-      <div id="collapseTwo" class="collapse" data-parent="#accordion">
-        <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      <div class="alert alert-secondary" style="margin-top:20px">
+            <h5>Project website</h5> 
+        </div>
+      <div id="accordion1">
+        <div class="card">
+          <div class="card-header"> <a class="card-link" data-toggle="collapse" href="#collapseOne1">#1 Computers management</a> </div>
+          <div id="collapseOne1" class="collapse" data-parent="#accordion1">
+            <div class="card-body">
+            <ul>
+            	<li><p>Show a list of computers to display their status such as computer online, offline or lock; price, information user, information services</p></li>
+                <li><p>Add features such as adding computer, editing computer and deleting computer</p></li>
+            </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"> <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo1">#2 Computer accessories</a> </div>
+          <div id="collapseTwo1" class="collapse" data-parent="#accordion1">
+            <div class="card-body">
+            <ul>
+            	<li><p>Show a list of computer accessories such as headphone, keyboard, mouse, chair and show their information</p></li>
+                <li><p>Add features such as adding accessories, editing accessories and deleting accessories</p></li>
+            </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header"> <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree1">#3 Statistical</a> </div>
+          <div id="collapseThree1" class="collapse" data-parent="#accordion1">
+            <div class="card-body">
+            <ul>
+            	<li><p>Statistics list of activities at the website</p></li>
+            </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-header">
-        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
-          Collapsible Group Item #3
-        </a>
-      </div>
-      <div id="collapseThree" class="collapse" data-parent="#accordion">
-        <div class="card-body">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </div>
-      </div>
-    </div>
-  </div>
+      <br /><br />
     </div>
     <!-- product --> 
   </div>
